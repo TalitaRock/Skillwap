@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSwap - Plataforma de Permuta Recíproca de Conhecimentos</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="SkillSwap: Plataforma colaborativa para ensinar e aprender habilidades através da troca recíproca de conhecimentos com Moeda Zero, IA Match, WebRTC e Gamificação.">
+  <meta name="theme-color" content="#0b0f19">
+
+  <!-- Modern Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              blue: '#2563eb',
+              green: '#10b981',
+              purple: '#6366f1',
+              gold: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Canvas Confetti for Duolingo-style XP reward animations -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-blue-600 selection:text-white">
+
+  <!-- Top Navigation Header Container (RF18, RF02) -->
+  <div id="navbar-container"></div>
+
+  <!-- Main View Container (Switches between Explorar, Trocas, Chat, Aula WebRTC, Agenda, Conquistas, Perfil, Admin, Certificado) -->
+  <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"></main>
+
+  <!-- Modals and Dialog Overlays (Proposals, Reviews, Match Breakdown, Scheduling) -->
+  <div id="modal-container"></div>
+
+  <!-- Floating XP & Achievement Toasts Container (RF19) -->
+  <div id="xp-toasts-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end pointer-events-none"></div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 bg-slate-950/80 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-slate-400">SkillSwap</span>
+        <span>• Economia Colaborativa e Democratização do Saber</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] text-slate-400">
+        <span>Moeda Zero</span>
+        <span>•</span>
+        <span>Algoritmo IA Match 2.0</span>
+        <span>•</span>
+        <span>WebRTC P2P Seguro</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
